@@ -6,7 +6,7 @@
 /* 背景部分 タブレット用記述 960→1024pxに変更*/
 @media screen and (max-width:1024px){
     .Background-image{
-        background-image:url(//camp.potepan.com/wp-content/themes/potepancamp/assets/styles/../images/home/first-view/top-hero.jpg);
+        background-image:url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position:center;
