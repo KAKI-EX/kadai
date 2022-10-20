@@ -87,7 +87,7 @@
         top: 0;
         transform: rotate(-45deg);
     }
-    /* ハンバーガーメニュー部分 開いた時の内容 */
+    /* ハンバーガーメニュー部分 開いた時の内容 1*/
     .menu-content {
         margin-top: 52px;
         width: 100%;
@@ -107,8 +107,11 @@
     {
         margin: 40px auto;
         text-align: center;
-        
     }
+    .Content_subject_hamburger table:hover{
+        opacity: 0.85;
+    }
+
     }
     .Content_subject_hamburger th{
         color: #fff;
@@ -277,7 +280,7 @@
 
 .Tablet_movie{
     margin: 0px 2% 0px 15%;
-    padding: 40px 0px;
+    padding: 40px 0px 13px 0px;
 }
 
 .Tablet_movie video{
@@ -291,9 +294,9 @@
 }
 
 .Intro h1{
-    position: relative;
-    top: -22px;
+    box-sizing: border-box;
     font-size: 33px;
+
 }
 .PC_sentence{                   /* PC用の表記 display:none */
     display: none;
@@ -305,9 +308,8 @@
 }
 
 .Tablet_Mobile_sentence{
-    position: relative;
-    top: -22PX;
-    padding-top: 20px;
+    box-sizing: border-box;
+    padding-top: 10px;
     font-size: 16px;
     width: 76%;
 
