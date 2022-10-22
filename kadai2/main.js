@@ -1,8 +1,10 @@
 
 
-let secondsTimeCount = document.getElementById("secondsCounter");
+let count= 0;
+let secondsTimeCount = function(){document.getElementById("secondsCounter").innerHTML = count++};
+
 function pushStartButton(){
-secondsTimeCount.innerHTML = "1"
+setInterval(secondsTimeCount,1000)
 }
 
 
