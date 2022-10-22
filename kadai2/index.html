@@ -21,7 +21,7 @@
         <span class="colon">：</span>
       </div>
       <div class="seconds">
-        <p id="secondsCounter">X</p>
+        <p id="secondsCounter"></p>
         <span class="colon">：</span>
       </div>
       <div class="subseconds">
@@ -30,13 +30,13 @@
     </div>
     <div class="bottomArea">
       <div class="start">
-        <button id="startButton">スタート</button>
+        <button id="startButton" onclick=pushStartButton();>スタート</button>
       </div>
       <div class="stop">
-        <button id="stopButton">ストップ</button>
+        <button id="stopButton" onclick=pushStopButton();>ストップ</button>
       </div>
       <div class="reset">
-        <button id="resetButton">リセット</button>
+        <button id="resetButton" onclick=pushResetButton();>リセット</button>
       </div>
     </div>
   </div>
