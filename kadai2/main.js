@@ -1,41 +1,36 @@
 
+document.getElementById("subSecondsCounter").innerHTML = 0;
+document.getElementById("secondsCounter").innerHTML = 0;
+document.getElementById("minutesCounter").innerHTML = 0;
+document.getElementById("hoursCounter").innerHTML = 0;
 
-let count= 0;
-let secondsTimeCount = function(){document.getElementById("secondsCounter").innerHTML = count++};
-let booleanSecond = true; //booleanの初期値はtrue
+let count= 0; //0からスタート
+let subSecondsTimeCount = function(){document.getElementById("subSecondsCounter").innerHTML = count++};
+let booleanSubSecond = true;  //booleanの初期値はtrue
 
 function pushStartButton(){
-  if(booleanSecond == true){
-    booleanSecond = false;  //booleanにfalseを再代入
-    startSeconds = setInterval(secondsTimeCount,1000);  //計測開始
-  }else if(booleanSecond == false){  //falseの場合には何もしない(二度押し防止)
+  if(booleanSubSecond == true){
+    booleanSubSecond = false;  //booleanにfalseを再代入
+    startSubSeconds = setInterval(subSecondsTimeCount,100);  //計測開始
+  }else if(booleanSubSecond == false){  //falseの場合には何もしない(二度押し防止)
   }
-}
+};
 
 function pushStopButton(){
-  if(booleanSecond == false){
-    clearInterval(startSeconds);
-    booleanSecond = true
-  }else if(booleanSecond == true){
+  if(booleanSubSecond == false){
+    clearInterval(startSubSeconds);
+    booleanSubSecond = true;
+  }else if(booleanSubSecond == true);{
   }
-}
+};
 
 function pushResetButton(){
-  alert("リセットボタン")  
-}
+  pushStopButton();
+  let = document.getElementById("subSecondsCounter").innerHTML = 0;
+  let = document.getElementById("secondsCounter").innerHTML = 0;
+  let = document.getElementById("minutesCounter").innerHTML = 0;
+  let = document.getElementById("hoursCounter").innerHTML = 0;
+  let = count = 0
+};
 
-/*let count = 0
-const secondsCountUp = 
-  console.log(count++);
-  setInterval(secondsCountUp,1000)*/
-
-
-
-/*function pushStartButton(){
-log
-}
-/*  setInterval(log,1000)
-}
-
-
-*/
+if(count>9){alert("成功！")};
