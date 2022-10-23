@@ -12,6 +12,7 @@ function pushStartButton(){
   if(booleanSubSecond == true){
     booleanSubSecond = false;  //booleanにfalseを再代入
     startSubSeconds = setInterval(subSecondsTimeCount,100);  //計測開始
+      if(subSecondsTimeCount == 9){alert("成功！")}
   }else if(booleanSubSecond == false){  //falseの場合には何もしない(二度押し防止)
   }
 };
