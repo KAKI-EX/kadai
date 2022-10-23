@@ -11,7 +11,7 @@ let booleanSubSecond = true;  //booleanの初期値はtrue
 let secondsCount = 55;
 let secondsTimeCount = function(){document.getElementById("secondsCounter").innerHTML = secondsCount++};
 
-let minutesCount = 59;
+let minutesCount = 58;
 let minutesTimeCount = function(){document.getElementById("minutesCounter").innerHTML = minutesCount++};
 
 let hoursCount = 1;
@@ -27,7 +27,7 @@ function pushStartButton(){
           if(secondsCount>59 && subSecondsCount==9){  //サブセコンド9、秒数59になったら0に戻り1分足す。
             secondsCount = 0;
             minutesTimeCount()}
-            if(minutesCount>59 && secondsCount>59){
+            if(minutesCount>59 && secondsCount==59 && subSecondsCount==9){
               minutesCount = 0;
               hoursTimeCount()
           }}
