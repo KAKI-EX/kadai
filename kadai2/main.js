@@ -1,5 +1,5 @@
 
-document.getElementById("subSecondsCounter").innerHTML = 1;
+document.getElementById("subSecondsCounter").innerHTML = 0;
 document.getElementById("secondsCounter").innerHTML = 0;
 document.getElementById("minutesCounter").innerHTML = 0;
 document.getElementById("hoursCounter").innerHTML = 0;
@@ -11,8 +11,8 @@ let booleanSubSecond = true;  //booleanの初期値はtrue
 function pushStartButton(){
   if(booleanSubSecond == true){
     booleanSubSecond = false;  //booleanにfalseを再代入
-    startSubSeconds = setInterval(subSecondsTimeCount,100);  //計測開始
-      if(subSecondsTimeCount == 9){alert("成功！")}
+    startSubSeconds = setInterval(function(){subSecondsTimeCount();
+      if(count>9){count = 0}} ,100); //計測開始とカウント9で0に戻る
   }else if(booleanSubSecond == false){  //falseの場合には何もしない(二度押し防止)
   }
 };
