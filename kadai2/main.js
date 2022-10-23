@@ -17,7 +17,6 @@ function pushStopButton(){
     clearInterval(startSeconds);
     booleanSecond = true
   }else if(booleanSecond == true){
-    alert("何もしない")
   }
 }
 
