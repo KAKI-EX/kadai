@@ -1,5 +1,5 @@
 
-document.getElementById("subSecondsCounter").innerHTML = 0;
+document.getElementById("subSecondsCounter").innerHTML = 1;
 document.getElementById("secondsCounter").innerHTML = 0;
 document.getElementById("minutesCounter").innerHTML = 0;
 document.getElementById("hoursCounter").innerHTML = 0;
