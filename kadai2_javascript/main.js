@@ -17,8 +17,9 @@ let minutes_TimeCount = document.getElementById("minutesCounter");
 let hoursCount = 0;
 let hours_TimeCount = document.getElementById("hoursCounter");
 
-function time_CountUp()
-{
+/*let changeColor_StartButton = */ 
+
+function time_CountUp(){
 subSecondsCount += 1;
 subSeconds_TimeCount.innerHTML = subSecondsCount;
 seconds_TimeCount.innerHTML = secondsCount;
@@ -43,7 +44,10 @@ function pushStartButton(){
   if(booleanFlag == true){
     booleanFlag = false;
     time= setInterval(function(){time_CountUp()},100);
-      }else if(booleanFlag == false){ //何もしない
+    $("#startButton").addClass("addOpacity");
+    $("#stopButton").removeClass("addOpacity");
+    $("#resetButton").removeClass("addOpacity");
+      }else if(booleanFlag == false){
       };
 } 
 
@@ -51,6 +55,8 @@ function pushStopButton(){
   if(booleanFlag==false){
   booleanFlag = true;
   clearInterval(time);
+  $("#startButton").removeClass("addOpacity");
+  $("#stopButton").addClass("addOpacity");
   }
 }
 
@@ -65,4 +71,6 @@ function pushResetButton(){
   document.getElementById("secondsCounter").innerHTML = 0;
   document.getElementById("minutesCounter").innerHTML = 0;
   document.getElementById("hoursCounter").innerHTML = 0;
+  $("#resetButton").addClass("addOpacity");
+  $("#startButton").removeClass("addOpacity");
   }
