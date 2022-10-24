@@ -1,3 +1,4 @@
+booleanFlag = true
 
 document.getElementById("subSecondsCounter").innerHTML = 0;
 document.getElementById("secondsCounter").innerHTML = 0;
@@ -7,10 +8,10 @@ document.getElementById("hoursCounter").innerHTML = 0;
 let subSecondsCount = 0; //0からスタート
 let subSeconds_TimeCount = document.getElementById("subSecondsCounter");
 
-let secondsCount = 55;
+let secondsCount = 0;
 let seconds_TimeCount = document.getElementById("secondsCounter");
 
-let minutesCount = 57;
+let minutesCount = 0;
 let minutes_TimeCount = document.getElementById("minutesCounter");
 
 let hoursCount = 0;
@@ -39,12 +40,32 @@ seconds_TimeCount.innerHTML = secondsCount;
 }
 
 function pushStartButton(){
-  test = setInterval(function(){time_CountUp()},100)}
+  if(booleanFlag == true){
+    booleanFlag = false;
+    time= setInterval(function(){time_CountUp()},100);
+      }else if(booleanFlag == false){ //何もしない
+      };
+} 
 
+function pushStopButton(){
+  if(booleanFlag==false){
+  booleanFlag = true;
+  clearInterval(time);
+  }
+}
 
-
-
-
+function pushResetButton(){
+  clearInterval(time);
+  booleanFlag = true
+  subSecondsCount = 0;
+  secondsCount = 0;
+  minutesCount = 0;
+  hoursCount = 0;
+  document.getElementById("subSecondsCounter").innerHTML = 0;
+  document.getElementById("secondsCounter").innerHTML = 0;
+  document.getElementById("minutesCounter").innerHTML = 0;
+  document.getElementById("hoursCounter").innerHTML = 0;
+  }
 /*
 let secondsCount = 0;
 let secondsTimeCount = document.getElementById("secondsCounter").innerHTML;
