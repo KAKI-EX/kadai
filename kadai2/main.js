@@ -32,7 +32,6 @@ seconds_TimeCount.innerHTML = secondsCount;
     minutes_TimeCount.innerHTML = minutesCount;
   }
   if(secondsCount>59 && minutesCount==59){
-    console.log("成功");
     minutesCount=-1;
     hoursCount +=1;
     hours_TimeCount.innerHTML = hoursCount;
