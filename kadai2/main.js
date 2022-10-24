@@ -31,7 +31,7 @@ seconds_TimeCount.innerHTML = secondsCount;
     minutesCount +=1;
     minutes_TimeCount.innerHTML = minutesCount
   }
-  if(minutesCount>59){
+  if(minutesCount>59){  //*59以上で0に戻るはずが、60以上で0に戻る
     minutesCount=0;
     hoursCount +=1;
     hours_TimeCount.innerHTML = hoursCount
