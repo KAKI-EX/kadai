@@ -5,7 +5,7 @@ document.getElementById("secondsCounter").innerHTML = 0;
 document.getElementById("minutesCounter").innerHTML = 0;
 document.getElementById("hoursCounter").innerHTML = 0;
 
-let subSecondsCount = 0; //0からスタート
+let subSecondsCount = 0;
 let subSeconds_TimeCount = document.getElementById("subSecondsCounter");
 
 let secondsCount = 0;
@@ -16,8 +16,6 @@ let minutes_TimeCount = document.getElementById("minutesCounter");
 
 let hoursCount = 0;
 let hours_TimeCount = document.getElementById("hoursCounter");
-
-/*let changeColor_StartButton = */ 
 
 function time_CountUp(){
 subSecondsCount += 1;
