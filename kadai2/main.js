@@ -10,7 +10,7 @@ let subSeconds_TimeCount = document.getElementById("subSecondsCounter");
 let secondsCount = 55;
 let seconds_TimeCount = document.getElementById("secondsCounter");
 
-let minutesCount = 58;
+let minutesCount = 57;
 let minutes_TimeCount = document.getElementById("minutesCounter");
 
 let hoursCount = 0;
@@ -26,13 +26,14 @@ seconds_TimeCount.innerHTML = secondsCount;
     subSecondsCount=-1;
     secondsCount = secondsCount+=1;
   }
-  if(secondsCount>59){
+  if(secondsCount>59 && minutesCount!=59){
     secondsCount=0;
     minutesCount +=1;
-    minutes_TimeCount.innerHTML = minutesCount
+    minutes_TimeCount.innerHTML = minutesCount;
   }
-  if(minutesCount>59){  //*59以上で0に戻るはずが、60以上で0に戻る
-    minutesCount=0;
+  if(secondsCount>59 && minutesCount==59){
+    console.log("成功");
+    minutesCount=-1;
     hoursCount +=1;
     hours_TimeCount.innerHTML = hoursCount;
   }
