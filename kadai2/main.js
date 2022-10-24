@@ -7,10 +7,10 @@ document.getElementById("hoursCounter").innerHTML = 0;
 let subSecondsCount = 0; //0からスタート
 let subSeconds_TimeCount = document.getElementById("subSecondsCounter");
 
-let secondsCount = 0;
+let secondsCount = 55;
 let seconds_TimeCount = document.getElementById("secondsCounter");
 
-let minutesCount = 0;
+let minutesCount = 58;
 let minutes_TimeCount = document.getElementById("minutesCounter");
 
 let hoursCount = 0;
@@ -34,7 +34,7 @@ seconds_TimeCount.innerHTML = secondsCount;
   if(minutesCount>59){  //*59以上で0に戻るはずが、60以上で0に戻る
     minutesCount=0;
     hoursCount +=1;
-    hours_TimeCount.innerHTML = hoursCount
+    hours_TimeCount.innerHTML = hoursCount;
   }
 }
 
