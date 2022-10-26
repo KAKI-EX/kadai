@@ -4,6 +4,7 @@
 
 calStatus = "Wait"; /* 待機状態 */
 let count = 0
+let w0Count = 0
 
 function buttonClick(target) {
   target_value = target.innerHTML; 
@@ -13,17 +14,24 @@ function buttonClick(target) {
 
   if(target_value == "AC"){
       calStatus = "Stop"
-      calStatus = 0
+      count = 0
+      w0Count = 0
       result.innerHTML = "0";
     }else if(target_value == "="){
       result.innerHTML = eval(result.innerHTML);
+      count = 0
+      w0Count = 0
 
     }else if(result.innerHTML == "0" && target_value !== "."){
-      result.innerHTML =target_value;
-
+      result.innerHTML = target_value;
+      count = 0;
+      w0Count = 0;
     }else{
-        result.innerHTML += target_value
-        count = 0
+      count = 0;
+      w0Count = 0;
+      calStatus = "Start"
+      result.innerHTML += target_value
+
     }
   }
 
@@ -39,5 +47,22 @@ function buttonClick2(target2) {
   }else if(calStatus == "Start" && count > 1){ /* 2回目の記号なら何も返さない*/
     
   }
+}
 
+function buttonClick3(target3) {
+  w0Count++;
+  console.log(w0Count);
+  console.log(count);
+  console.log(calStatus);
+  target3_value = target3.innerHTML
+  if(result.innerHTML == "0" && target3_value == "00"){
+    result.innerHTML = "0";
+  }else if(count >=1 && w0Count == 1){
+    result.innerHTML += "0"
+  }else if(count >=1 && w0Count >1 ){
+    console.log("記号の後に00が2回押された")
+    
+  }else{
+    result.innerHTML += target3_value;
+  }
 }
