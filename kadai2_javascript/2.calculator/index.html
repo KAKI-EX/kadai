@@ -11,37 +11,36 @@
 <h3>電卓</h3>
   <div class = "container">
     <div class = "displayBody">
-      <input type="text" id="display" name="display" value="" disabled>
-      </table>
+      <p ID = result>0</p>
     </div>
     <div class = panels>
       <div class = "panel1">
-        <button id="button7" onclick=button7();>7</button>
-        <button id="button8" onclick=button8();>8</button>
-        <button id="button9" onclick=button9();>9</button>
-        <button id="buttonPlus" onclick=buttonPlus();>+</button>
+        <button class="target" onclick=buttonClick(this);>7</button>
+        <button class="target" onclick=buttonClick(this);>8</button>
+        <button class="target" onclick=buttonClick(this);>9</button>
+        <button class="target" onclick=buttonClick(this);>+</button>
       </div>
       <div class = "panel2">
-        <button id="button4" onclick=button4();>4</button>
-        <button id="button5" onclick=button5();>5</button>
-        <button id="button6" onclick=button6();>6</button>
-        <button id="buttonMinus" onclick=buttonMinus();>-</button>
+        <button class="target" onclick=buttonClick(this);>4</button>
+        <button class="target" onclick=buttonClick(this);>5</button>
+        <button class="target" onclick=buttonClick(this);>6</button>
+        <button class="target" onclick=buttonClick(this);>-</button>
       </div>
       <div class = "panel3">
-        <button id="button1" onclick=button1();>1</button>
-        <button id="button2" onclick=button2();>2</button>
-        <button id="button3" onclick=button3();>3</button>
-        <button id="buttonTimes" onclick=buttonTimes();>*</button>
+        <button class="target" onclick=buttonClick(this);>1</button>
+        <button class="target" onclick=buttonClick(this);>2</button>
+        <button class="target" onclick=buttonClick(this);>3</button>
+        <button class="target" onclick=buttonClick(this);>*</button>
       </div>
       <div class = "panel4">
-        <button id="button0" onclick=button0();>0</button>
-        <button id="button00" onclick=button00();>00</button>
-        <button id="button." onclick=buttonDot();>.</button>
-        <button id="button/" onclick=buttonDivided();>/</button>
+        <button class="target" onclick=buttonClick(this);>0</button>
+        <button class="target" onclick=buttonClick(this);>00</button>
+        <button class="target" onclick=buttonClick(this);>.</button>
+        <button class="target" onclick=buttonClick(this);>/</button>
       </div>
       <div class = "panel5">
-        <button id="buttonAC" onclick=buttonAC();>AC</button>
-        <button id="buttonEqual" onclick=buttonEqual();>=</button>
+        <button class="target" onclick=buttonClick(this);>AC</button>
+        <button class="target" onclick=buttonClick(this);>=</button>
       </div>
     </div>
   </div>
