@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="main.css">
+<title>電卓</title>
+</head>
+
+<body>
+<h3>電卓</h3>
+  <div class = "container">
+    <div class = "displayBody">
+      <p ID = result>0</p>
+    </div>
+    <div class = panels>
+      <div class = "panel1">
+        <button class="target" onclick=buttonClick(this);>7</button>
+        <button class="target" onclick=buttonClick(this);>8</button>
+        <button class="target" onclick=buttonClick(this);>9</button>
+        <button class="target2" onclick=buttonClick2(this);>+</button>
+      </div>
+      <div class = "panel2">
+        <button class="target" onclick=buttonClick(this);>4</button>
+        <button class="target" onclick=buttonClick(this);>5</button>
+        <button class="target" onclick=buttonClick(this);>6</button>
+        <button class="target2" onclick=buttonClick2(this);>-</button>
+      </div>
+      <div class = "panel3">
+        <button class="target" onclick=buttonClick(this);>1</button>
+        <button class="target" onclick=buttonClick(this);>2</button>
+        <button class="target" onclick=buttonClick(this);>3</button>
+        <button class="target2" onclick=buttonClick2(this);>*</button>
+      </div>
+      <div class = "panel4">
+        <button class="target4" onclick=buttonClick4(this);>0</button>
+        <button class="target3" onclick=buttonClick3(this);>00</button>
+        <button class="target5" onclick=buttonClick5(this);>.</button>
+        <button class="target2" onclick=buttonClick2(this);>/</button>
+      </div>
+      <div class = "panel5">
+        <button class="target" onclick=buttonClick(this);>AC</button>
+        <button class="target" onclick=buttonClick(this);>=</button>
+      </div>
+    </div>
+  </div>
+
+<script src="main.js"></script>
+</body>
+</html>
